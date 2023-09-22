@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #f8f8f8;
+    
+    overflow: hidden;
+    
+}
+
+.container-box {
+    display: flex;
+    background-color: #fff;
+    width: 400px;
+    height: 450px;
+    flex-direction: column;
+    padding: 4rem;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, .153);
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+h1{
+    margin-bottom: 2rem;
+    text-align: center;
+
+}
+/* =============== inputs zone ================ */
+.input-box {
+    position: relative;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+
+/* .input-box::before {
+    position: absolute;
+    bottom: -1px;
+    transform: scaleX(0);
+    content: '';
+    height: .1px;
+    width: 100%;
+    transform-origin: left;
+    background-color: blue;
+    transition: .2s linear;
+}
+
+.input-box:focus-within::before,
+.input-box:focus-within {
+    transform: scaleX(1);
+    border-bottom: 1px solid transparent;
+} */
+
+.input-box input {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: .5rem 2.5rem .5rem .2rem;
+    border: none;
+    background-color: transparent;
+    transition: .1s;
+    outline: none;
+}
+
+.input-box label {
+    font-size: .9rem;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    transform: translateY(50%);
+    transition: .1s;
+    pointer-events: none;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    transform: translate(-10%, -50%);
+    font-size: .7rem;
+    font-weight: bold;
+
+}
+/* ==============end input zone ============ */
+.show {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(40%);
+}
+
+.show button {
+    border: none;
+    color: blue;
+    background-color: transparent;
+    cursor: pointer;
+    visibility: hidden;
+    outline: none;
+}
+.box{
+    margin: -.8rem 0 1.5rem;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-size: .9rem;
+    
+}
+#SingIn{
+    background-color: #313131;
+    border: transparent;
+    color: #fff;
+    padding: 1rem 0;
+    border-radius: .4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .1s;
+ 
+}
+#SingIn:hover{
+    background-color: rgb(89, 89, 89);
+}
+.creat-acount{
+    margin-top: 2rem;
+    font-size: .9rem;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+    color: inherit;
+}
+.bubble{
+    position: absolute;
+    background-color: pink;
+    border-radius: 50%;
+    filter: blur(90px);
+}
+.b-1{
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    right: -20px;
+    z-index: -1;
+
+}
+.b-2{
+    top: 0;
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    left: -20px;
+    z-index: -1;
+    filter: blur(100px);
+}
+.b-3{
+    bottom: 0;
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    z-index: -1;
+    filter: blur(100px);
+}

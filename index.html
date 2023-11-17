@@ -65,15 +65,19 @@ const a = document.querySelector('a');
 const formWrapper = document.querySelector('.form-wrapper');
 const formContainer = document.querySelector('.form-container');
 
-formWrapper.addEventListener('click', ()=>{
-    formWrapper.classList.remove('active')
-    formWrapper.style.visibility = 'hidden'
-})
+formContainer.addEventListener('click', (event) => {
+    event.stopPropagation(); // Impede a propagação do clique para o formWrapper
+});
+
+formWrapper.addEventListener('click', () => {
+    formWrapper.classList.remove('active');
+    formWrapper.style.visibility = 'hidden';
+});
+
 a.addEventListener('click', () => {
     formWrapper.style.visibility = 'visible'; // Ativar o form-wrapper
     formWrapper.classList.add('active'); // Adiciona a classe 'active' para iniciar a animação
 });
-
     </script>
 </body>
 </html>

@@ -38,9 +38,9 @@ h1{
 .input-box {
     position: relative;
     margin-bottom: 1.5rem;
-    background-color: #f6f6f6;
+    background-color: #f0f0f0;
     padding: .8rem 0 0 0;
-    border-radius: 8px;
+    border-radius: .6rem;
 }
 
 .input-box::before {
@@ -51,7 +51,7 @@ h1{
     height: 2.5px;
     width: 100%;
     background-color: #045ad0;
-    transition: transform 30ms linear;
+    transition: transform 40ms linear;
 }
 .input-box input::placeholder{
     opacity: 0;
@@ -101,29 +101,38 @@ h1{
     opacity: 1;
 }
 
+.input-box input:focus~label{
+    color: #0c61d8;
+}
 .input-box input:focus~label,
 .input-box input:valid~label {
     transform: translate(-10%, 0%);
     font-size: .8rem;
-    color: #0c61d8;
-    
-
 }
 /* ==============end input zone ============ */
 .show {
     position: absolute;
     right: 10px;
     top: 0;
-    transform: translateY(50%);
+    transform: translateY(45%);
 }
 
 .show button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
-    color: blue;
+    padding: .3rem;
     background-color: transparent;
     cursor: pointer;
     visibility: hidden;
     outline: none;
+    width: 1.8rem;
+    transition: background-color 400ms;
+}
+.show button:hover{
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.06);
 }
 .box{
     margin: -.8rem 0 1.5rem;

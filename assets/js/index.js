@@ -1,5 +1,4 @@
 const EmailUser = document.getElementById('email-user')
-const PasswordUser = document.getElementById('password-user')
 const input = document.getElementById('password-user')
 const button = document.getElementById('button')
 

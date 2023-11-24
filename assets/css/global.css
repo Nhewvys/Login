@@ -24,7 +24,7 @@ body {
     width: 400px;
     height: 450px;
     flex-direction: column;
-    padding: 4rem;
+    padding: 4rem 3.5rem;
     border-radius: 1rem;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, .153);
     border: 1px solid rgba(0, 0, 0, .1);
@@ -96,7 +96,7 @@ h1{
     top: 0;
     left: 1rem;
     transform: translateY(70%);
-    transition: .2s;
+    transition: .2s ease-in;
     pointer-events: none;
     opacity: 1;
 }
@@ -199,14 +199,14 @@ a:visited{
     filter: blur(100px);
 }
 @media  (max-width: 450px) {
-    main{
-        width: 100%;
-        height: 100%;
+    body {
+        overflow: hidden;
     }
+    
     .container-box{
         width: 100%;
         height: 100vh;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: #fff;
         padding: 10rem 4rem 0 4rem;
         border-radius: 0;
         box-shadow: none;
@@ -226,9 +226,9 @@ a:visited{
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    transition: all .2s linear;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all .1s ease;
     visibility: hidden;
 
 }
@@ -247,7 +247,7 @@ a:visited{
     border-radius: 10px;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.084), 0px 2px 3px rgba(0, 0, 0, 0.168);
     transform: scale(0.5);
-    transition: transform 0.5s ease;
+    transition: transform .2s ease;
   }
   
   .form-container button:active {

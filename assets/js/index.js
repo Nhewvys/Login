@@ -6,7 +6,10 @@ const button = document.getElementById('button')
 button.addEventListener('click', changeVisibilityPassword)
 input.addEventListener('input', showPassword)
 
-function changeVisibilityPassword() {
+function changeVisibilityPassword(evento) {
+
+    evento.stopPropagation();
+    
     if (input.type == 'password') {
         input.type = 'text'
         input.focus()

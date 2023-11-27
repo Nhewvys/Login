@@ -188,7 +188,7 @@ a:visited{
     background-color: red;
     right: -20px;
     z-index: -1;
-
+    overflow: hidden;
 }
 .b-2{
     top: 0;
@@ -198,6 +198,7 @@ a:visited{
     left: -20px;
     z-index: -1;
     filter: blur(100px);
+    overflow: hidden;
 }
 .b-3{
     bottom: 0;
@@ -205,18 +206,28 @@ a:visited{
     height: 250px;
     background-color: green;
     z-index: -1;
+    overflow: hidden;
     filter: blur(100px);
 }
+
+/* ============================================= */
 @media  (max-width: 450px) {
     body {
         overflow: hidden;
+        margin: 0;
+        padding: 0;
     }
-    
+    .bubble{
+        display: none;
+    }
+    h1{
+        margin-bottom: 2.5rem;
+    }
     .container-box{
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background-color: #fff;
-        padding: 10rem 4rem 0 4rem;
+        padding: 10rem 3rem 0 3rem;
         border-radius: 0;
         box-shadow: none;
         border: none;
